@@ -1,5 +1,3 @@
-
-
 function setFooterHeight(_height)
 {
 const interval = setInterval(function() {
