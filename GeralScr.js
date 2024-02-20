@@ -1,5 +1,4 @@
 
-<script>
 
 function setFooterHeight(_height)
 {
@@ -169,5 +168,5 @@ gtag('event', 'email_open', {'user_mail': atob(myParam),});
 
         };
 
-</script>
+
 
