@@ -74,7 +74,7 @@ if(window.location.href.includes("https://arena7.bet/sports/mobile/deposit/1") |
 	if(document.getElementsByClassName('input ng-dirty').length>0)
 	{	
 		
-		  lastDepositValue = document.getElementsByClassName('input ng-dirty')[0].value.replace("R$ ","").replace(",",".");
+		  lastDepositValue = document.getElementsByClassName('input ng-dirty')[0].value.replace("R$ ","").replace(".","").replace(",",".");
 
 		
 	}
