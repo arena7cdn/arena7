@@ -10,7 +10,7 @@ var ResponseData=JSON.parse(this.responseText);
 if(ResponseData.status===0)
 {
 
-console.log(document.getElementsByClassName('input ng-dirty')[0].value.replace("R$ ","").replace(",","."));
+//console.log(document.getElementsByClassName('input ng-dirty')[0].value.replace("R$ ","").replace(",","."));
  
   var UserMail= JSON.parse(atob(atob(localStorage.getItem("YWNjZXNzX3Rva2Vu")).replace('"', "").split('.')[1])).unique_name;
    var _Dados = {
