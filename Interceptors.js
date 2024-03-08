@@ -51,7 +51,8 @@ if(ResponseData.status===0)
 var _Dados = { 
 "Nome":UserData.name,
   "Email":UserData.email,
-   "Telefone":UserData.phoneNumber
+   "Telefone":UserData.phoneNumber,
+  "Codigo":UserData.promotionAfiliateCode
    };
 
   fetch("https://redirect.arena7.bet/api/pixel/CADActive?data="+btoa(JSON.stringify(_Dados)), {
