@@ -87,6 +87,14 @@ if(window.location.href.includes("https://arena7.bet/sports/mobile/deposit/1") |
 const urlParams = new URLSearchParams(window.location.search);
 if(urlParams!==null)
 {
+const invite = urlParams.get('invite');
+if(invite!==null)
+{
+localStorage.setItem("inviteCode",invite);
+	
+}
+
+	
 const myParam = urlParams.get('trace');
 if(myParam!==null)
 {
