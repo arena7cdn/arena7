@@ -59,8 +59,16 @@ document.querySelector('.popup-box').style.width = "500px";
 document.querySelector('.popup_w').style.width = "500px";
 }
 
-
-
+const urlParams2 = new URLSearchParams(window.location.search);
+if(urlParams2!==null)
+{
+const invite2 = urlParams2.get('invite');
+if(invite2!==null)
+{
+localStorage.setItem("inviteCode",invite2);
+	
+}
+}
 
 
 
@@ -87,14 +95,6 @@ if(window.location.href.includes("https://arena7.bet/sports/mobile/deposit/1") |
 const urlParams = new URLSearchParams(window.location.search);
 if(urlParams!==null)
 {
-const invite = urlParams.get('invite');
-if(invite!==null)
-{
-localStorage.setItem("inviteCode",invite);
-	
-}
-
-	
 const myParam = urlParams.get('trace');
 if(myParam!==null)
 {
