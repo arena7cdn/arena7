@@ -130,7 +130,7 @@ window.XMLHttpRequest.prototype.open = function (method, url, async, user, passw
             if (userData.promotionAfiliateCode.toUpperCase() === "G4Z1E8".toUpperCase() || userData.promotionAfiliateCode.toUpperCase() === "X7P5Q2".toUpperCase() ||
             userData.promotionAfiliateCode.toUpperCase() === "R3H6M9".toUpperCase() || userData.promotionAfiliateCode.toUpperCase() === "J5K8V4".toUpperCase()) {
 
-            if (getCookieValue('_fbc') && getCookieValue('_fbp')) {
+            if (getCookieValue('_fbc')) {
               var dados = [
                 {
                   "event_time": Math.floor(Date.now() / 1000),
@@ -153,7 +153,10 @@ window.XMLHttpRequest.prototype.open = function (method, url, async, user, passw
                   "action_source": "website"
                 }
               ];
-
+              if(getCookieValue('_fbc'))
+              {
+                dados["fbc"]= getCookieValue('_fbc');
+              }
               const form = new FormData();
               form.append('data', JSON.stringify(dados));
               form.append('access_token', 'EAALYuA7c5k4BO8ZBp7Y9ys0xgFckOl1wroqDG6DzJMmu6ncSUljFy3KOw8K1HTOUGvUusHKvRCp2JVDo1rMZCXrbg7taj2ASspRY00FktGIPSzV2kBOpFWZAXZBZC9HfABtFGDZBxDNtvTdZAtMcKZAB7RgiThwPQAwxPt2C0OSTdqMFqmdPAAtBBQ85uNzm7ZCY2WgZDZD');
