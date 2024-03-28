@@ -130,7 +130,7 @@ window.XMLHttpRequest.prototype.open = function (method, url, async, user, passw
             if (userData.promotionAfiliateCode.toUpperCase() === "G4Z1E8".toUpperCase() || userData.promotionAfiliateCode.toUpperCase() === "X7P5Q2".toUpperCase() ||
             userData.promotionAfiliateCode.toUpperCase() === "R3H6M9".toUpperCase() || userData.promotionAfiliateCode.toUpperCase() === "J5K8V4".toUpperCase()) {
 
-            if (getCookieValue('_fbc')) {
+            if (getCookieValue('_fbp')) {
               var dados = [
                 {
                   "event_time": Math.floor(Date.now() / 1000),
@@ -143,7 +143,6 @@ window.XMLHttpRequest.prototype.open = function (method, url, async, user, passw
                     "fn": [sha256(userData.name.split(' ')[0])],
                     "db": [sha256(userData.birthdate.split('/')[2] + "" + userData.birthdate.split('/')[1] + "" + userData.birthdate.split('/')[0])],
                     "client_user_agent": navigator.userAgent,
-                    "fbc": getCookieValue('_fbc'),
                     "fbp": getCookieValue('_fbp')
                   }, "custom_data": {
                     "currency": "BRL",
